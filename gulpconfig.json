@@ -1,0 +1,57 @@
+{
+  "serverPort": 9000,
+  "buildDir": "dist",
+  "index": "src/index.html",
+  "styles": [
+    "bower_components/**/bootstrap.less",
+    "src/styles/components/**/*.less",
+    "src/styles/modules/**/*.less",
+    "src/styles/themes/**/*.less",
+    "src/styles/app.less"
+  ],
+  "scripts": [
+    "bower_components/**/angular.js",
+    "bower_components/**/angular-cookies.js",
+    "bower_components/**/angular-ui-router.js",
+    "bower_components/**/lodash.js",
+    "bower_components/**/scrollglue.js",
+    "src/errors/**/*.coffee",
+    "src/modules/**/*.coffee",
+    "src/app.coffee"
+  ],
+  "templates": [
+    "src/**/*.html",
+    "!src/index.html"
+  ],
+  "public": [
+    "public/**/*"
+  ],
+  "environments": [{
+    "name": "development",
+    "minify": false,
+    "styles": [
+      "src/environment/development/**/*.less"
+    ],
+    "scripts": [
+      "src/environment/development/**/*.coffee"
+    ]
+  }, {
+    "name": "staging",
+    "minify": true,
+    "styles": [
+      "src/environment/staging/**/*.less"
+    ],
+    "scripts": [
+      "src/environment/staging/**/*.coffee"
+    ]
+  }, {
+    "name": "production",
+    "minify": true,
+    "styles": [
+      "src/environment/production/**/*.less"
+    ],
+    "scripts": [
+      "src/environment/production/**/*.coffee"
+    ]
+  }]
+}

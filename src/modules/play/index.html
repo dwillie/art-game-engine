@@ -1,0 +1,26 @@
+<div class="game-scene" style="background-color: {{ currentLocation().backgroundColor || 'black' }}">
+    <div class="message-log" scroll-glue>
+      <div class="message {{ message.class }}"
+           ng-class="{ last: $index == messageHistory.length - 1 }"
+           ng-repeat="message in messageHistory"
+           ng-animate=" 'message-log' ">
+        <h1>{{ message.heading }}</h1>
+
+        <p class="body">{{ message.body }}</p>
+
+        <div class="item-list" ng-show="message.items.length > 0">
+          <p>You can see the following items here:</p>
+          <ul>
+            <li ng-repeat="item in message.items">
+                {{ item.name }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="player-input">
+      <p>What would you like to do?</p>
+      <input ng-model="playerInput" ng-enter="executeCommand()">
+    </div>
+</div>
