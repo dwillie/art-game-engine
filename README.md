@@ -1,14 +1,5 @@
-To sort out your dependencies, execute the following commands:
+# art-game-engine
 
-```
-$ npm install
-$ bower install
-```
+The art game engine aims to bring text-based games into the browser and the modern world. The long-term goal is to provide an engine to support the development of text-based games, with animated text, font changes, colour control, music etc.
 
-Then whenever you want to build and/or run, do:
-
-```
-$ gulp watch
-```
-
-This will build everything to a `dist/` directory and serve your website at `http://localhost:9000`. A watcher will also be spawned to ensure that re-builds automatically occur whenever files change, so just keep that running while you work.
+It isn't close to done, sorry. :)
